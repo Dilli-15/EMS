@@ -42,7 +42,7 @@ router.post('/organized',async(req,res)=>{
         fromDate:req.body.fromDate,
         toDate:req.body.toDate,
         proof:req.body.proof,
-        uid: req.body.id,
+        uid: req.body.uid,
         registerId:req.body.registerId,
         participants:req.body.participants,
         internalStudents:req.body.internalStudents,
@@ -72,7 +72,7 @@ router.post('/addEvent',async(req,res)=>{
         fromDate:req.body.fromDate,
         toDate:req.body.toDate,
         proof:req.body.proof,
-        uid: req.body.id,
+        uid: req.body.uid,
         registerId:req.body.registerId
     });
     try {

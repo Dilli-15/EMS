@@ -64,6 +64,15 @@ router.get('/:uid',async(req,res)=>{
 //         }
 //     });
 // });
+router.get('/:school',function(req,res){
+    User.find({school:req.params.school},function(err,users){
+        if(err){
+            console.log({message:err});
+        }else{
+            res.json(users);
+        }
+    });
+});
 
 router.post('/login', (req, res) => {
     const registerId = req.body.registerId
