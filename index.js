@@ -13,6 +13,7 @@ const aroutes = require('./routes/Auth');
 const eroutes = require('./routes/event');
 const proutes = require('./routes/publication');
 const exroutes = require('./routes/experience');
+const adroutes = require('./routes/admin');
 
 mongoose.connect('mongodb://localhost/ems',{
     useNewUrlParser:true,
@@ -37,10 +38,12 @@ app.use(sessions({
 app.use(cors({origin:"*"}));
 app.use('/user',uroutes);
 app.use('/dean',droutes);
+app.use('/admin',adroutes);
 app.use('/event',eroutes);
 app.use('/publication',proutes);
 app.use('/experience',exroutes);
 app.use('/',aroutes);
+
 
 
 
