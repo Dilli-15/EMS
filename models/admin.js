@@ -5,5 +5,5 @@ const adminSchema = mongoose.Schema({
     name :{type:String, required:true},
     password:{type:String, required:true},
 });
-userSchema.plugin(uniqueValidator);
+adminSchema.plugin(uniqueValidator);
 module.exports = mongoose.model("admin", adminSchema);

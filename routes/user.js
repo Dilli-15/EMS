@@ -64,8 +64,8 @@ router.get('/:uid',async(req,res)=>{
 //         }
 //     });
 // });
-router.get('/:school',function(req,res){
-    User.find({school:req.params.school},function(err,users){
+router.get('/school/:sch',function(req,res){
+    User.find({school:req.params.sch},function(err,users){
         if(err){
             console.log({message:err});
         }else{
