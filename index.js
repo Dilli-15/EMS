@@ -14,6 +14,7 @@ const eroutes = require('./routes/event');
 const proutes = require('./routes/publication');
 const exroutes = require('./routes/experience');
 const adroutes = require('./routes/admin');
+const pjroutes  = require('./routes/project');
 
 mongoose.connect('mongodb://localhost/ems',{
     useNewUrlParser:true,
@@ -41,6 +42,7 @@ app.use('/dean',droutes);
 app.use('/admin',adroutes);
 app.use('/event',eroutes);
 app.use('/publication',proutes);
+app.use('/project',pjroutes);
 app.use('/experience',exroutes);
 app.use('/',aroutes);
 
